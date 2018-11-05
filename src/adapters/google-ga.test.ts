@@ -1,9 +1,9 @@
-import { googleGA } from './google-ga';
+import { GA, googleGA } from './google-ga';
 
 declare global {
   namespace NodeJS {
     interface Global {
-      ga?: Function;
+      ga?: GA;
     }
   }
 }

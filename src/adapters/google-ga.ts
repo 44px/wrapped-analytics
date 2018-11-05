@@ -3,13 +3,14 @@ import { EventProperties, EventTracker } from '../wrapped-analytics';
 // ga function signature:
 // ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
 // see https://developers.google.com/analytics/devguides/collection/analyticsjs/events#implementation
-interface GA {
+export interface GA {
   (
     method: string,
     type: string,
     eventCategory?: string,
     eventAction?: string,
     eventLabel?: string,
+    eventValue?: string,
     fieldsObject?: any,
   ): void;
 }
