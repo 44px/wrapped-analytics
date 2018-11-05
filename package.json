@@ -1,6 +1,6 @@
 {
   "name": "wrapped-analytics",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "",
   "keywords": [],
   "main": "dist/wrapped-analytics.umd.js",
@@ -12,7 +12,7 @@
   "author": "Alexander Shepelin <brightcor@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/44px/wrapped-analytics.git"
+    "url": "https://github.com/44px/wrapped-analytics.git"
   },
   "license": "MIT",
   "engines": {
@@ -31,7 +31,8 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -111,13 +112,14 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.17.0",
-    "semantic-release": "^15.9.16",
+    "semantic-release": "^15.10.7",
     "ts-jest": "^23.10.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "typedoc": "^0.12.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.0.3",
+    "travis-deploy-once": "^5.0.9"
   }
 }
