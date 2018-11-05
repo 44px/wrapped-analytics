@@ -15,22 +15,38 @@ import {
   wrappedAnalytics,
   googleGA,
   googleGTAG,
-  yandexMetrica
 } from 'wrapped-analytics';
 
-const analytics = wrappedAnalytics([
-    googleGA,
-    googleGTAG,
-    yandexMetrica
+const trackEvent = wrappedAnalytics([
+  googleGA,
+  googleGTAG,
 ]);
 
-analytics.trackEvent('MyEvent', {value: 1});
+trackEvent('subscribe', {
+  category: 'subscriptionForms',
+  label: 'newsletter',
+});
 ```
 
 #### API Reference
 
-Basically, there is only one API method available: `trackEvent`
+All adapters have same API:
+```js
+trackEvent(
+  event,            // Event to track (string)
+  eventProperties,  // Optional event properties
+);
+
+// Each field here is optional too
+eventProperties = {
+  category, 
+  label,
+  value,
+};
+```
+
+`wrappedAnalytics` accepts list of adapters and produce a single `trackEvent` function which passes data to each of registered adapters.
 
 ### Browser support
 
-TODO
+IE9+
