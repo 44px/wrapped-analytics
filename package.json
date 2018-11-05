@@ -50,6 +50,10 @@
     },
     "testEnvironment": "jsdom",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -69,7 +73,7 @@
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/*.{js,ts}"
+      "src/**.{js,ts}"
     ]
   },
   "prettier": {
