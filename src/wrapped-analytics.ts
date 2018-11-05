@@ -17,3 +17,6 @@ export function wrappedAnalytics(trackers: EventTracker[]): EventTracker {
     trackers.forEach(track => track(event, eventProperties));
   };
 }
+
+export { googleGA } from './adapters/google-ga';
+export { googleGTAG } from './adapters/google-gtag';
